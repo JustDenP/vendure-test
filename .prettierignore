@@ -1,0 +1,7 @@
+# Add files here to ignore them from prettier formatting
+/dist
+/coverage
+.next
+node_modules
+*-lock.json
+/__admin-ui

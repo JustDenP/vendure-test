@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    "schedule:daily",
+    ":automergeMinor",
+    ":prConcurrentLimitNone",
+    ":prHourlyLimitNone",
+    ":prImmediately"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "prHourlyLimit": 10,
+  "ignorePresets": [
+    ":ignoreModulesAndTests"
+  ],
+  "rangeStrategy": "replace",
+  "automerge": true
+}

@@ -1,0 +1,97 @@
+{
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
+  "plugins": ["@typescript-eslint", "prettier", "simple-import-sort", "import"],
+  "env": {
+    "node": true,
+    "jasmine": true
+  },
+  "rules": {
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "bracketSpacing": true,
+        "endOfLine": "lf",
+        "overrides": [
+          {
+            "files": "*.json",
+            "options": {
+              "printWidth": 120
+            }
+          }
+        ],
+        "printWidth": 100,
+        "proseWrap": "preserve",
+        "semi": true,
+        "singleQuote": true,
+        "tabWidth": 2,
+        "trailingComma": "all"
+      }
+    ],
+    "semi": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-use-before-define": "off",
+    "arrow-body-style": "error",
+    "arrow-parens": ["error", "always"],
+    "constructor-super": "error",
+    "dot-notation": "off",
+    "eol-last": "error",
+    "guard-for-in": "error",
+    "id-match": "error",
+    "no-else-return": "error",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-implicit-coercion": "error",
+    "no-multi-spaces": "error",
+    "no-restricted-imports": "off",
+    "no-useless-return": "error",
+    "object-curly-spacing": ["error", "always"],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "next": "return",
+        "prev": "*"
+      },
+      {
+        "blankLine": "always",
+        "next": "try",
+        "prev": "*"
+      },
+      {
+        "blankLine": "always",
+        "next": "*",
+        "prev": "try"
+      },
+      {
+        "blankLine": "always",
+        "next": "block-like",
+        "prev": "*"
+      },
+      {
+        "blankLine": "always",
+        "next": "*",
+        "prev": "block-like"
+      },
+      {
+        "blankLine": "always",
+        "next": "throw",
+        "prev": "*"
+      },
+      {
+        "blankLine": "always",
+        "next": "*",
+        "prev": "var"
+      }
+    ]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    }
+  },
+  "parser": "@typescript-eslint/parser"
+}

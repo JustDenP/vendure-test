@@ -1,0 +1,13 @@
+{
+  "watch": [
+    "src/",
+    ".env"
+  ],
+  "ext": "ts,js,json",
+  "ignore": [
+    "src/__admin-ui/*",
+    "src/plugins/**/ui/*",
+    "src/migrations"
+  ],
+  "exec": "TS_NODE_TRANSPILE_ONLY=true npm run concurrently"
+}
